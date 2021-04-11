@@ -1,0 +1,101 @@
+
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px auto 1fr auto auto;
+  grid-template-areas:
+    "header header"
+    "bio img"
+    "article article"
+    "overview map"
+    "social social";
+  grid-gap: 20px;
+  margin: auto;
+  width: 98%;
+}
+
+.blog-header {
+  border-style: solid;
+  grid-area: header;
+  width: 100%
+}
+
+.bio {
+  border-style: solid;
+  text-align: center;
+  color: blue;
+  font-size: 70px;
+  grid-area: bio;
+}
+
+.blog-image {
+  border-style: solid;
+  text-align: center;
+  grid-area: img;
+}
+
+.blog-main-content {
+  font-size: 100px;
+  border-style: solid;
+  grid-area: article;
+  text-align: center;
+}
+
+.blog-overview {
+  border-style: solid;
+  text-align: center;
+  color: green;
+  font-size: 70px;
+  grid-area: overview;
+}
+
+.blog-map {
+  border-style: solid;
+  text-align: center;
+  grid-area: map;
+}
+
+.blog-social {
+  border-style: solid;
+  border-color: aquamarine;
+  grid-area: social;
+}
+
+.home-btn-posts {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Media queries below ensure responsiveness across devices 
+and screen sizes (mobile, tablet, desktop/laptop) */
+
+@media (min-width: 800px) and (max-width: 1200px){
+  .blog-container{
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas:
+      "header header"
+      "bio article"
+      "img article"
+      "overview article"
+      "map article"
+      "social social";
+  }
+}
+
+@media (min-width: 1201px) {
+  .blog-container{
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "overview article bio"
+      "map article img"
+      "social social social";
+  }
+}

@@ -1,0 +1,39 @@
+
+
+.home-btn-posts {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px;
+  padding: 5px;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+#test {
+  font-size: 100px;
+  color: pink;
+  background-color: gray;
+  text-align: center;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.social {
+  vertical-align: middle;
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.social:hover {
+  opacity: 70%;
+  transition-duration: 0.18s;
+}

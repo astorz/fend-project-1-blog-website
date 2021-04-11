@@ -1,0 +1,215 @@
+@import "style-blog-1.css";
+@import "style-blog-2.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: minmax(425px, 600px);
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  justify-content: space-around;
+}
+
+/* Media queries below ensure responsiveness across devices 
+and screen sizes (mobile, tablet, desktop/laptop) */
+
+@media (min-width: 800px) and (max-width: 1200px){
+  .container{
+    grid-template-columns: repeat(2, minmax(425px, 1fr));
+    grid-template-areas:
+      "header header"
+      "content content"
+      "footer footer";
+  }
+}
+
+@media (min-width: 1201px){
+  .container{
+    grid-template-columns: repeat(3, minmax(425px, 1fr));
+    grid-template-areas:
+      "header header header"
+      "content content content"
+      "footer footer footer";
+  }
+}
+
+header {
+  width: 100%;
+  grid-area: header;
+}
+
+.header-title {
+  background-color: #abc123;
+  color: white;
+  font-family: "Pacifico", sans-serif;
+  font-size: 75px;
+  margin: 0;
+  padding-top: 0;
+  text-align: center;
+}
+
+.navbar {
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+}
+
+.navbar .navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .navigation a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0;
+  display: block;
+}
+
+.navbar .search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.navbar input[type=text] {
+  padding: 6px;
+  font-size: 15px;
+  border: none;
+}
+
+.navbar .search-container button {
+  padding: 6px 5px;
+  background: #ddd;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  background-color: rgba(144,204,211,1);
+}
+
+@media (min-width: 800px){
+  .navbar .navigation a {
+    font-size: 20px;
+  }
+}
+
+.card {
+  color: gray;
+  min-width: 350px;
+  max-width: 450px;
+  height: 300px;
+  margin: 25px;
+  border-top-style: solid;
+  border-top-color: rgba(144,204,211,1);
+  border-top-width: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 3.5px;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-bottom: 1px;
+  font-family: "Pacifico", sans-serif;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-textbox {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button {
+  background-color: rgba(110,204,211,1);
+  /* background-color: red; */
+  border: none;
+  color: white;
+  padding: 7.5px 15px;
+  border-radius: 2.5px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: Helvetica;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#blog-1-img {
+  background-image: url("../images/IMG_01.jpeg");
+}
+#blog-2-img {
+  background-image: url("../images/IMG_02.jpeg");
+}
+#blog-3-img {
+  background-image: url("../images/IMG_03.jpeg");
+}
+#blog-4-img {
+  background-image: url("../images/IMG_04.jpeg");
+}
+#blog-5-img {
+  background-image: url("../images/IMG_05.jpeg");
+}
+#blog-6-img {
+  background-image: url("../images/IMG_06.jpeg");
+}
+
+#blog-7 {
+  color: #fffff8;
+  background-color: #abc123;
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  line-height: 125px;
+  font-size: 40px;
+}
+
+footer {
+  margin: 1px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: lightgray;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: darkgrey;
+  grid-area: footer;
+}
