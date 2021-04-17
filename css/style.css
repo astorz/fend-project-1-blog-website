@@ -12,7 +12,7 @@ body {
   display: grid;
   width: 100%;
   margin: auto;
-  grid-template-columns: minmax(425px, 600px);
+  grid-template-columns: minmax(425px, 800px);
   grid-auto-rows: auto;
   grid-gap: 20px;
   grid-template-areas:
@@ -66,7 +66,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 25px;
+  padding: 5px 15px;
 }
 
 .navbar .navigation {
@@ -85,9 +85,9 @@ header {
   display: block;
 }
 
-.navbar .search-container {
+.navbar .search-container form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
 }

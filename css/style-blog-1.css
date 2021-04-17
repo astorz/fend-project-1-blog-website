@@ -21,7 +21,8 @@ body {
 h1 {
   font-size: 50px;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
 }
 
 h2 {
@@ -49,15 +50,18 @@ blockquote {
   grid-template-rows: 100px auto 1fr auto auto;
   grid-template-areas:
     "title title"
+    "title title"
     "bio img"
-    "social img"
+    "bio social"
     "article article"
     "overview map";
-  /* grid-gap: 20px; */
   font-family: "Open Sans", sans-serif;
 }
 
 .bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   color: darkslategrey;
   font-size: 20px;
@@ -69,6 +73,7 @@ blockquote {
 .avatar {
   width: 80px;
   height: max-content;
+  margin: 10px;
 }
 
 #author-details {
@@ -97,6 +102,13 @@ blockquote {
   display: block;
 }
 
+.blog-image figcaption {
+  margin-top: 2.5px;
+  margin-bottom: 30px;
+  color: gray;
+  font-size: 12px;
+}
+
 .blog-main-content {
   grid-area: article;
   text-align: left;
@@ -104,10 +116,25 @@ blockquote {
 }
 
 .blog-overview {
-  border-style: solid;
-  color: green;
+  color: darkolivegreen;
+  background-color: whitesmoke;
   font-size: 70px;
   grid-area: overview;
+  padding: 0px 25px 0px 5px;
+}
+
+#blog-overview-header {
+  text-align: center;
+  font-size: 25px;
+}
+
+.summary-list {
+  font-size: 20px;
+
+}
+
+.summary-list p {
+  text-align: left;
 }
 
 .blog-map {
@@ -146,11 +173,11 @@ and screen sizes (mobile, tablet, desktop/laptop) */
     grid-template-columns: 1fr 1.5fr;
     grid-template-areas:
       "title title"
-      "bio article"
-      "social article"
-      "img article"
-      "overview article"
-      "map article";
+      "title title"
+      "bio img"
+      "social img"
+      "article article"
+      "overview map";
   }
 }
 
@@ -161,7 +188,7 @@ and screen sizes (mobile, tablet, desktop/laptop) */
     grid-template-areas:
       "title title title"
       "bio article img"
-      "social article img"
+      "social article overview"
       "map article overview"
   }
 }
