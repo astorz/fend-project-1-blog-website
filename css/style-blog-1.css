@@ -93,6 +93,10 @@ blockquote {
   padding: 0px 25px;
 }
 
+#short-bio p {
+  font-style: italic;
+}
+
 .blog-image {
   grid-area: img;
 }
@@ -123,6 +127,14 @@ blockquote {
   padding: 0px 25px 0px 5px;
 }
 
+.blog-overview h2 {
+  text-decoration: underline dotted;
+}
+
+.blog-overview p {
+  font-style: italic;
+}
+
 #blog-overview-header {
   text-align: center;
   font-size: 25px;
@@ -130,10 +142,13 @@ blockquote {
 
 .summary-list {
   font-size: 20px;
-
+  text-decoration: underline;
 }
 
 .summary-list p {
+  display: inline-block;
+  /* Found above fix via: */
+  /* https://stackoverflow.com/questions/25762427/remove-underline-only-from-anchor-element-child */
   text-align: left;
 }
 
