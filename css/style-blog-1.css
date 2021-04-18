@@ -46,15 +46,17 @@ blockquote {
 
 .blog-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px auto 1fr auto auto;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto 1fr auto auto auto;
   grid-template-areas:
-    "title title"
-    "title title"
-    "bio img"
-    "bio social"
-    "article article"
-    "overview map";
+    "title"
+    "title"
+    "title"
+    "bio"
+    "social"
+    "img"
+    "article"
+    "overview";  
   font-family: "Open Sans", sans-serif;
 }
 
@@ -155,8 +157,7 @@ blockquote {
 .blog-map {
   grid-area: map;
   background: url("../images/shenandoah-map.jpeg") no-repeat;
-  background-size: contain;
-  background-position: top right;
+  /* max-width:100%; */
 }
 
 .blog-social {
